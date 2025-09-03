@@ -15,7 +15,7 @@ body{
 }
 .header__menu {
 }
-.icon {
+.header__icon {
     list-style: none;
     padding-left: 0;
     margin: 0;  
@@ -23,7 +23,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
-.icons{
+.header-icon__container{
     display: flex;
 }
 .icon__picture {
@@ -190,7 +190,7 @@ body{
 .nav {
     
 }
-.item {
+.nav__item {
     display: flex;
     list-style: none;
     margin-bottom: 0;
@@ -295,13 +295,13 @@ background-color: #F8F8F8;
     margin-left: 24px;
  }
 }
-/*------------SIDEMENU-------------------*/
+/*------------SIDE-MENU-------------------*/
 
-.sideMenu {
+.side-menu {
     margin: 0;
     padding: 0;
 }
-.sideMenu__list {
+.side-menu__list {
     display: flex;
     list-style: none;
     overflow: auto;
@@ -313,21 +313,21 @@ background-color: #F8F8F8;
     height: 40px;
     width: 100%;
 }
-.sideMenu__button {
+.side-menu__button {
     margin-right: 15px;
     display: flex;
 }
-.sideMenu__button:last-child{
+.side-menu__button:last-child{
     margin-right: 24px;
 }
-.sideMenu__link_blue {
+.side-menu__link_blue {
     border: 2px solid #B8FFEC;
     background-color: #FFFFFF;
     width: 246px;
     justify-content: center;
 }
 
-.sideMenu__link {
+.side-menu__link {
     align-items: center;
     display: flex;
     text-align: center;
@@ -340,7 +340,7 @@ background-color: #F8F8F8;
     color: #7E7E82;
 }
 @media(min-width:768px){
-    .sideMenu__list{
+    .side-menu__list{
         margin-top: 32px;
         margin-left: 24px;
     }
@@ -375,7 +375,7 @@ p{
         display: none;
     }
 }
-.readMore__button {
+.read-more__button {
     display: flex;
     width: 132px;
     height: 24px;
@@ -384,7 +384,7 @@ p{
     margin-bottom: 0;
 }
 
-.readMore__text {
+.read-more__text {
     text-decoration: none;
     color: #1B1C21;
     width: 100px;
@@ -414,7 +414,7 @@ height: 176px;
         margin-bottom: 0;
         padding-bottom: 0;
     }
-    .readMore__button{
+    .read-more__button{
         margin-top: 0px;
         padding-left: 1px;
     }
@@ -445,7 +445,7 @@ height: 176px;
         margin-top: 16.22px;
         margin-left: 35px;
     }
-    .readMore__button{
+    .read-more__button{
         margin-left: 32px;
     }
     .picture{
