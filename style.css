@@ -231,9 +231,7 @@ body{
     display: flex;
     margin: 8px 25px 0px 32px;
     padding: 0;
-    width: 1063px;    
-    flex-wrap: wrap;
-    
+    width: 100%;    
 }
 .menu__button {
    list-style: none;
@@ -250,7 +248,7 @@ body{
    color: #7E7E82;
    height: 24px;
    border-radius: 6px;
-   padding: 0.55vw 1.7vw;
+   padding: 0.55vw 1vw;
    display: flex;
    justify-content: center;
 }
@@ -259,7 +257,11 @@ body{
     background-color: #FFFFFF;
     
 }
-
+@media(min-width: 1320px){
+    .menu__list{
+        justify-content:space-around;
+    }
+}
 
 
 /*------------------TITLE-------------------------------------*/
@@ -362,26 +364,30 @@ background-color: #F8F8F8;
     letter-spacing: 0.2px;
     color: #1B1C21;
 }
-p{
-    
-}
+
 @media(max-width:767px){
-    .text2{
+    .section__text_second{
         display: none;
     }
 }
 @media(max-width:1119px){
-    .text3{
+    .section__text_third{
         display: none;
     }
 }
-.read-more__button {
+.read-more {
     display: flex;
     width: 132px;
     height: 24px;
     margin-left: 16px;
     margin-top: 16px;
     margin-bottom: 0;
+}
+
+.read-more__button {
+} 
+
+.read-more__picture {
 }
 
 .read-more__text {
@@ -414,7 +420,7 @@ height: 176px;
         margin-bottom: 0;
         padding-bottom: 0;
     }
-    .read-more__button{
+    .read-more{
         margin-top: 0px;
         padding-left: 1px;
     }
@@ -445,7 +451,7 @@ height: 176px;
         margin-top: 16.22px;
         margin-left: 35px;
     }
-    .read-more__button{
+    .read-more{
         margin-left: 32px;
     }
     .picture{
@@ -453,6 +459,46 @@ height: 176px;
         height: 307px;
         margin-top: 7px;
         margin-left: 18px;
+    }
+}
+@media(min-width:1740px){
+    .aside{
+        
+        margin-left: 200px;
+    }
+    .section__text{
+        width: 800px;
+        height: 160px;
+        margin-top: 16.22px;
+        margin-left: 35px;
+    }
+    .read-more{
+        margin-left: 32px;
+    }
+    .picture{
+        width: 800px;
+        height: 500px;
+        margin-top: 7px;
+        
+        
+    }
+}
+@media(min-width:1400px){
+    .section__text{
+        width: 600px;
+        height: 160px;
+        margin-top: 16.22px;
+        margin-left: 35px;
+    }
+    .read-more{
+        margin-left: 32px;
+    }
+    .picture{
+        width: 750px;
+        height: 400px;
+        margin-top: 7px;
+        margin-left: 170px;
+        
     }
 }
 /*-------FOOTER------------*/
