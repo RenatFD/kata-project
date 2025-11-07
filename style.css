@@ -542,11 +542,10 @@ height: 176px;
     
 }
 .swiper-wrapper {
-    
+
 }
 .swiper-slide {
-    
-    
+    width: 240px;
 }
 .bradns-card {
     display: flex;
@@ -659,9 +658,11 @@ height: 176px;
     height: 250px !important;
 }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1440px) {
      .software-table{
-        margin-left: 410px;
+        grid-template-columns: repeat(4, 320px);
+        justify-content: space-around;
+        margin-left: 0;
     }
 }
 
