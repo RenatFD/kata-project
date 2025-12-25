@@ -1,0 +1,86 @@
+$primary-color: #FFFFFF;
+$grey-color: #7E7E82;
+$second-color: #F8F8F8;
+$third-color: #D9FFF5;
+$onde-color: #EAEAEA;
+.software {
+  min-height: 196px;
+  margin: 0;
+  padding: 0;
+
+  &__header {
+    border-top: 1px solid $third-color;
+    width: 320px;
+    height: 80px;
+    margin-top: 24px;
+    background: linear-gradient(270deg, $second-color 0%, $primary-color 98.61%);
+
+    @media (min-width: 768px) {
+      width: 768px;
+      height: 56px;
+      margin-top: 32px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    color: $grey-color;
+
+    @media (min-width: 768px) {
+      padding-top: 15px;
+      padding-left: 24px;
+    }
+  }
+}
+
+.swiper {
+  &-wrapper {
+  }
+
+  &-slide {
+    width: 240px;
+  }
+
+  &-picture {
+    margin-left: 16px;
+
+    &__image {
+      width: 108px;
+      height: 32px;
+    }
+  }
+
+  &__button {
+    margin-right: 16px;
+  }
+
+  &-pagination {
+    position: static !important;
+    margin-top: 16px;
+  }
+}
+
+.bradns-card { 
+  display: flex;
+  width: 238px;
+  height: 70px;
+  border-radius: 6px;
+  border: 1px solid $onde-color;
+  background-color: $primary-color;
+  margin-top: 16px;
+  margin-left: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .swiper__container {
+    display: none;
+  }
+
+}

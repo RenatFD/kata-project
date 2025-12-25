@@ -1,0 +1,89 @@
+$primary-color: #ffffff;
+$grey-color: #7e7e82;
+$black-color: #1b1c21;
+$pink-color: #ff3e79;
+.modal-call {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+ 
+  &__wrapper {
+    background: $primary-color;
+    width: 40%;
+    height: 100%;
+    margin-left: auto;
+    position: relative;
+    box-shadow: 0 4px 8px $grey-color;
+    @media (max-width: 767px) {
+      margin-left: auto;
+      width: 100%;
+    }
+  }
+  &__button {
+    padding-top: 24px;
+    padding-left: 16px;
+  }
+}
+.modal-call.active {
+  display: flex;
+}
+.header-modal-call {
+  margin-top: 30px;
+  &__title {
+    display: flex;
+  }
+  &__name {
+    padding-top: 10px;
+    padding-left: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: $black-color;
+  }
+}
+
+.highlight {
+}
+
+.main-modal-call {
+  margin-top: 24px;
+  &__text {
+    margin-left: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey-color;
+  }
+}
+.number {
+  &__input {
+    border: 1px solid $grey-color;
+    border-radius: 8px;
+    height: 48px;
+    width: 80%;
+    margin-left: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding-left: 32px;
+  }
+}
+.pink {
+  color: $pink-color;
+}
+.footer-send {
+  margin-top: 18px;
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 26px;
+  }
+}

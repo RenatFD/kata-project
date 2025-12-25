@@ -1,0 +1,54 @@
+$primary-color: #ffffff;
+$second-color: #f8f8f8;
+$third-color: #d9fff5;
+$grey-color: #7e7e82;
+$onde-color: #eaeaea;
+$black-color: #1b1c21;
+.software-table {
+  &__logo-2 {
+    height: 158px;
+    border-radius: 6px;
+    border: 1px solid $onde-color;
+    background-color: $primary-color;
+    margin: 0;
+    display: flex;
+    align-items: normal;
+  }
+  &__button-2 {
+  margin-top: 104px;
+  margin-right: 16px;
+}
+}
+.software-table-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 224px);
+  column-gap: 24px;
+  height: 160px;
+  overflow: hidden;
+  @media(max-width: 767px){
+    display: none;
+  }
+  @media(min-width:1120px){
+    display: grid;
+    grid-template-columns: repeat(4, 224px);
+  }
+}
+
+.software-table-title {
+  margin-top: 16px;
+  margin-left: 16px;
+  &__text {
+    color: $black-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .software-table-height-2 {
+    height: 336px;
+  }
+}

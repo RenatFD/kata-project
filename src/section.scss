@@ -1,0 +1,152 @@
+$primary-color: #f8f8f8;
+$black-color: #1b1c21;
+.section {
+  background-color: $primary-color;
+
+  &__text {
+    margin: 24px 16px 0 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: $black-color;
+
+    &_second {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &_third {
+      @media (max-width: 1119px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.read-more {
+  display: flex;
+  width: 132px;
+  height: 24px;
+  margin-left: 16px;
+  margin-top: 16px;
+  margin-bottom: 0;
+
+  &__text {
+    text-decoration: none;
+    color: $black-color;
+    width: 100px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-left: 8px;
+  }
+}
+
+.picture {
+  margin-top: 16px;
+  display: flex;
+  width: 320px;
+  height: 176px;
+}
+
+@media (min-width: 768px) {
+  p {
+    margin: 0;
+  }
+
+  .section__text {
+    margin-top: 32px;
+    margin-left: 24px;
+    width: 312px;
+    height: 160px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .read-more {
+    margin-top: 0;
+    padding-left: 1px;
+  }
+
+  .section {
+    display: flex;
+  }
+
+  .aside {
+    padding: 0;
+    margin: 0;
+  }
+
+  .picture {
+    display: flex;
+    height: 208px;
+    margin-top: 32px;
+    margin-right: 25px;
+    margin-left: 30px;
+    padding: 0;
+    border-radius: 6px;
+  }
+
+  .text2 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1120px) {
+  .section__text {
+    width: 490px;
+    height: 160px;
+    margin-top: 16.22px;
+    margin-left: 35px;
+  }
+
+  .read-more {
+    margin-left: 32px;
+  }
+
+  .picture {
+    width: 531.35px;
+    height: 307px;
+    margin-top: 7px;
+    margin-left: 18px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .section__text {
+    margin-top: 16.22px;
+    margin-left: 35px;
+  }
+
+  .read-more {
+    margin-left: 32px;
+  }
+
+  .picture {
+    display: flex;
+    height: 307px;
+    margin-top: 7px;
+    margin-left: 140px;
+  }
+}
+
+@media (min-width: 1740px) {
+  .section__text {
+    width: 800px;
+    height: 160px;
+    margin-top: 16.22px;
+    margin-left: 35px;
+  }
+
+  .read-more {
+    margin-left: 32px;
+  }
+
+  .picture {
+    height: 307px;
+    margin-top: 7px;
+  }
+}

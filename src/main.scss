@@ -1,0 +1,36 @@
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: medium;
+  font-weight: 400;
+  src: url('./TTLAKES/TTLakes-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: medium;
+  font-weight: 500;
+  src: url('./TTLAKES/TTLakes-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: medium;
+  font-weight: 600;
+  src: url('./TTLAKES/TTLakes-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: medium;
+  font-weight: 700;
+  src: url('./TTLAKES/TTLakes-Medium.woff') format('woff');
+}
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-style: medium;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: #F8F8F8;
+}

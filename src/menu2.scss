@@ -1,0 +1,47 @@
+$primary-color: #FFFFFF;
+$gray-color: #7E7E82;
+$second-color: #B8FFEC;
+
+.article {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  &__list {
+    display: flex;
+    margin: 8px 25px 0 32px;
+    padding: 0;
+    width: 100%;
+
+    @media (min-width: 1320px) {
+      justify-content: space-around;
+    }
+  }
+
+  &__button {
+    list-style: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $gray-color;
+    height: 24px;
+    border-radius: 6px;
+    padding: 0.55vw 1vw;
+    display: flex;
+    justify-content: center;
+
+    &_blue {
+      border: 2px solid $second-color;
+      background-color: $primary-color;
+    }
+  }
+}
