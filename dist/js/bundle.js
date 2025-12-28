@@ -478,20 +478,27 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.modal-call {
+  display: none;
   position: fixed;
   top: 0;
-  left: 70%;
-  width: 30%;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  display: none;
-  background-color: #ffffff;
 }
-@media (max-width: 600px) {
-  .modal-call {
-    left: 0;
+.modal-call__wrapper {
+  background: #ffffff;
+  width: 40%;
+  height: 100%;
+  margin-left: auto;
+  position: relative;
+  box-shadow: 0 4px 8px #7e7e82;
+}
+@media (max-width: 767px) {
+  .modal-call__wrapper {
+    margin-left: auto;
     width: 100%;
   }
 }
@@ -500,7 +507,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.modal-call {
   padding-left: 16px;
 }
 
-.active {
+.modal-call.active {
   display: flex;
 }
 
@@ -555,7 +562,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.modal-call {
   display: flex;
   justify-content: flex-end;
   margin-right: 26px;
-}`, "",{"version":3,"sources":["webpack://./src/modalcall.scss"],"names":[],"mappings":"AAIA;EACE,eAAA;EACA,MAAA;EACA,SAAA;EACA,UAAA;EACA,YAAA;EACA,8BAAA;EACA,2BAAA;EACA,aAAA;EACA,aAAA;EACA,yBAdc;AAWhB;AAIE;EAXF;IAYI,OAAA;IACA,WAAA;EADF;AACF;AAIE;EACE,iBAAA;EACA,kBAAA;AAFJ;;AAKA;EACE,aAAA;AAFF;;AAIA;EACE,gBAAA;AADF;AAEE;EACE,aAAA;AAAJ;AAEE;EACE,iBAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAvCU;AAuCd;;AAOA;EACE,gBAAA;AAJF;AAKE;EACE,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,cAtDS;AAmDb;;AAOE;EACE,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AAJJ;;AAOA;EACE,cAtEW;AAkEb;;AAMA;EACE,gBAAA;AAHF;AAIE;EACE,aAAA;EACA,yBAAA;EACA,kBAAA;AAFJ","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$black-color: #1b1c21;\r\n$pink-color: #ff3e79;\r\n.modal-call {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 70%;\r\n  width: 30%;\r\n  height: 100%;\r\n  background: rgba(0, 0, 0, 0.6);\r\n  justify-content: flex-start;\r\n  z-index: 1000;\r\n  display: none;\r\n  background-color: $primary-color;\r\n  @media(max-width:600px){\r\n    left: 0;\r\n    width: 100%;\r\n  }\r\n  &__wrapper {  \r\n  }\r\n  &__button {\r\n    padding-top: 24px;\r\n    padding-left: 16px;\r\n  }\r\n}\r\n.active {\r\n  display: flex ;\r\n}\r\n.header-modal-call {\r\n  margin-top: 30px;\r\n  &__title {\r\n    display: flex;\r\n  }\r\n  &__name {\r\n    padding-top: 10px;\r\n    padding-left: 12px;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: $black-color;\r\n  }\r\n}\r\n\r\n.highlight {\r\n}\r\n\r\n.main-modal-call {\r\n  margin-top: 24px;\r\n  &__text {\r\n    margin-left: 16px;\r\n    font-weight: 500;\r\n    font-size: 14px;\r\n    line-height: 16px;\r\n    color: $grey-color;\r\n  }\r\n}\r\n.number {\r\n  &__input {\r\n    border: 1px solid $grey-color;\r\n    border-radius: 8px;\r\n    height: 48px;\r\n    width: 80%;\r\n    margin-left: 16px;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    padding-left: 32px;\r\n  }\r\n}\r\n.pink {\r\n  color: $pink-color;\r\n}\r\n.footer-send {\r\n  margin-top: 18px;\r\n  &__button {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    margin-right: 26px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modalcall.scss"],"names":[],"mappings":"AAIA;EACE,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;AAHF;AAKE;EACE,mBAhBY;EAiBZ,UAAA;EACA,YAAA;EACA,iBAAA;EACA,kBAAA;EACA,6BAAA;AAHJ;AAII;EAPF;IAQI,iBAAA;IACA,WAAA;EADJ;AACF;AAGE;EACE,iBAAA;EACA,kBAAA;AADJ;;AAIA;EACE,aAAA;AADF;;AAGA;EACE,gBAAA;AAAF;AACE;EACE,aAAA;AACJ;AACE;EACE,iBAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cA7CU;AA8Cd;;AAMA;EACE,gBAAA;AAHF;AAIE;EACE,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,cA5DS;AA0Db;;AAME;EACE,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AAHJ;;AAMA;EACE,cA5EW;AAyEb;;AAKA;EACE,gBAAA;AAFF;AAGE;EACE,aAAA;EACA,yBAAA;EACA,kBAAA;AADJ","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$black-color: #1b1c21;\r\n$pink-color: #ff3e79;\r\n.modal-call {\r\n  display: none;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  justify-content: center;\r\n  align-items: center;\r\n  z-index: 1000;\r\n \r\n  &__wrapper {\r\n    background: $primary-color;\r\n    width: 40%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    position: relative;\r\n    box-shadow: 0 4px 8px $grey-color;\r\n    @media (max-width: 767px) {\r\n      margin-left: auto;\r\n      width: 100%;\r\n    }\r\n  }\r\n  &__button {\r\n    padding-top: 24px;\r\n    padding-left: 16px;\r\n  }\r\n}\r\n.modal-call.active {\r\n  display: flex;\r\n}\r\n.header-modal-call {\r\n  margin-top: 30px;\r\n  &__title {\r\n    display: flex;\r\n  }\r\n  &__name {\r\n    padding-top: 10px;\r\n    padding-left: 12px;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: $black-color;\r\n  }\r\n}\r\n\r\n.highlight {\r\n}\r\n\r\n.main-modal-call {\r\n  margin-top: 24px;\r\n  &__text {\r\n    margin-left: 16px;\r\n    font-weight: 500;\r\n    font-size: 14px;\r\n    line-height: 16px;\r\n    color: $grey-color;\r\n  }\r\n}\r\n.number {\r\n  &__input {\r\n    border: 1px solid $grey-color;\r\n    border-radius: 8px;\r\n    height: 48px;\r\n    width: 80%;\r\n    margin-left: 16px;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    padding-left: 32px;\r\n  }\r\n}\r\n.pink {\r\n  color: $pink-color;\r\n}\r\n.footer-send {\r\n  margin-top: 18px;\r\n  &__button {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    margin-right: 26px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -582,20 +589,27 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.modal-chat {
+  display: none;
   position: fixed;
   top: 0;
-  left: 70%;
-  width: 30%;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  display: none;
-  background-color: #ffffff;
 }
-@media (max-width: 600px) {
-  .modal-chat {
-    left: 0;
+.modal-chat__wrapper {
+  background: #ffffff;
+  width: 40%;
+  height: 100%;
+  margin-left: auto;
+  position: relative;
+  box-shadow: 0 4px 8px #7e7e82;
+}
+@media (max-width: 767px) {
+  .modal-chat__wrapper {
+    margin-left: auto;
     width: 100%;
   }
 }
@@ -691,7 +705,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.modal-chat {
   display: flex;
   justify-content: flex-end;
   margin-right: 26px;
-}`, "",{"version":3,"sources":["webpack://./src/modalchat.scss"],"names":[],"mappings":"AAIA;EACE,eAAA;EACA,MAAA;EACA,SAAA;EACA,UAAA;EACA,YAAA;EACA,8BAAA;EACA,2BAAA;EACA,aAAA;EACA,aAAA;EACA,yBAdc;AAWhB;AAIE;EAXF;IAYI,OAAA;IACA,WAAA;EADF;AACF;AAIE;EACE,iBAAA;EACA,kBAAA;AAFJ;;AAKA;EACE,aAAA;AAFF;;AAIA;EACE,gBAAA;AADF;AAEE;EACE,aAAA;AAAJ;AAEE;EACE,iBAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAvCU;AAuCd;;AAOA;EACE,gBAAA;AAJF;AAKE;EACE,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,cAtDS;AAmDb;;AAMA;EACE,gBAAA;AAHF;;AAKA;EACE,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AAFF;;AAKA;EACE,gBAAA;EACA,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AAFF;;AAIA;EACE,gBAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AADF;;AAIA;EACE,cAnGW;AAkGb;;AAGA;EACE,gBAAA;AAAF;AACE;EACE,aAAA;EACA,yBAAA;EACA,kBAAA;AACJ","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$black-color: #1b1c21;\r\n$pink-color: #ff3e79;\r\n.modal-chat {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 70%;\r\n  width: 30%;\r\n  height: 100%;\r\n  background: rgba(0, 0, 0, 0.6);\r\n  justify-content: flex-start;\r\n  z-index: 1000;\r\n  display: none;\r\n  background-color: $primary-color;\r\n  @media(max-width:600px){\r\n    left: 0;\r\n    width: 100%;\r\n  }\r\n  &__wrapper {\r\n  }\r\n  &__button {\r\n    padding-top: 24px;\r\n    padding-left: 16px;\r\n  }\r\n}\r\n.active-2 {\r\n  display: flex;\r\n}\r\n.header-modal-chat {\r\n  margin-top: 30px;\r\n  &__title {\r\n    display: flex;\r\n  }\r\n  &__name {\r\n    padding-top: 10px;\r\n    padding-left: 12px;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: $black-color;\r\n  }\r\n}\r\n\r\n.highlight {\r\n}\r\n\r\n.main-modal-chat {\r\n  margin-top: 24px;\r\n  &__text {\r\n    margin-left: 16px;\r\n    font-weight: 500;\r\n    font-size: 14px;\r\n    line-height: 16px;\r\n    color: $grey-color;\r\n  }\r\n}\r\n.number {\r\n  margin-top: 16px;\r\n}\r\n.name__input {\r\n  border: 1px solid $grey-color;\r\n  border-radius: 8px;\r\n  height: 48px;\r\n  width: 80%;\r\n  margin-left: 16px;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n  padding-left: 32px;\r\n}\r\n\r\n.email__input {\r\n  margin-top: 16px;\r\n  border: 1px solid $grey-color;\r\n  border-radius: 8px;\r\n  height: 48px;\r\n  width: 80%;\r\n  margin-left: 16px;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n  padding-left: 32px;\r\n}\r\n.message__input {\r\n  margin-top: 16px;\r\n  border: 1px solid $grey-color;\r\n  border-radius: 8px;\r\n  height: 118px;\r\n  width: 80%;\r\n  margin-left: 16px;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n  padding-left: 32px;\r\n}\r\n\r\n.pink {\r\n  color: $pink-color;\r\n}\r\n.footer-send {\r\n  margin-top: 18px;\r\n  &__button {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    margin-right: 26px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/modalchat.scss"],"names":[],"mappings":"AAIA;EACE,aAAA;EACA,eAAA;EACA,MAAA;EACA,OAAA;EACA,WAAA;EACA,YAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;AAHF;AAKE;EACE,mBAhBY;EAiBZ,UAAA;EACA,YAAA;EACA,iBAAA;EACA,kBAAA;EACA,6BAAA;AAHJ;AAII;EAPF;IAQI,iBAAA;IACA,WAAA;EADJ;AACF;AAGE;EACE,iBAAA;EACA,kBAAA;AADJ;;AAIA;EACE,aAAA;AADF;;AAGA;EACE,gBAAA;AAAF;AACE;EACE,aAAA;AACJ;AACE;EACE,iBAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cA7CU;AA8Cd;;AAMA;EACE,gBAAA;AAHF;AAIE;EACE,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,cA5DS;AA0Db;;AAKA;EACE,gBAAA;AAFF;;AAIA;EACE,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AADF;;AAIA;EACE,gBAAA;EACA,yBAAA;EACA,kBAAA;EACA,YAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AADF;;AAGA;EACE,gBAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;EACA,UAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,cAzGW;AAyGb;;AAEA;EACE,gBAAA;AACF;AAAE;EACE,aAAA;EACA,yBAAA;EACA,kBAAA;AAEJ","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$black-color: #1b1c21;\r\n$pink-color: #ff3e79;\r\n.modal-chat {\r\n  display: none;\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  justify-content: center;\r\n  align-items: center;\r\n  z-index: 1000;\r\n\r\n  &__wrapper {\r\n    background: $primary-color;\r\n    width: 40%;\r\n    height: 100%;\r\n    margin-left: auto;\r\n    position: relative;\r\n    box-shadow: 0 4px 8px $grey-color;\r\n    @media (max-width: 767px) {\r\n      margin-left: auto;\r\n      width: 100%;\r\n    }\r\n  }\r\n  &__button {\r\n    padding-top: 24px;\r\n    padding-left: 16px;\r\n  }\r\n}\r\n.active-2 {\r\n  display: flex;\r\n}\r\n.header-modal-chat {\r\n  margin-top: 30px;\r\n  &__title {\r\n    display: flex;\r\n  }\r\n  &__name {\r\n    padding-top: 10px;\r\n    padding-left: 12px;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: $black-color;\r\n  }\r\n}\r\n\r\n.highlight {\r\n}\r\n\r\n.main-modal-chat {\r\n  margin-top: 24px;\r\n  &__text {\r\n    margin-left: 16px;\r\n    font-weight: 500;\r\n    font-size: 14px;\r\n    line-height: 16px;\r\n    color: $grey-color;\r\n  }\r\n}\r\n.number {\r\n  margin-top: 16px;\r\n}\r\n.name__input {\r\n  border: 1px solid $grey-color;\r\n  border-radius: 8px;\r\n  height: 48px;\r\n  width: 80%;\r\n  margin-left: 16px;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n  padding-left: 32px;\r\n}\r\n\r\n.email__input {\r\n  margin-top: 16px;\r\n  border: 1px solid $grey-color;\r\n  border-radius: 8px;\r\n  height: 48px;\r\n  width: 80%;\r\n  margin-left: 16px;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n  padding-left: 32px;\r\n}\r\n.message__input {\r\n  margin-top: 16px;\r\n  border: 1px solid $grey-color;\r\n  border-radius: 8px;\r\n  height: 118px;\r\n  width: 80%;\r\n  margin-left: 16px;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n  padding-left: 32px;\r\n}\r\n\r\n.pink {\r\n  color: $pink-color;\r\n}\r\n.footer-send {\r\n  margin-top: 18px;\r\n  &__button {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n    margin-right: 26px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1149,22 +1163,28 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `@media (min-width: 1440px) {
-  .wrapper__main {
-    display: flex;
-  }
-  .image__close {
-    display: none;
-  }
-}
-.wrapper__sidebar {
+___CSS_LOADER_EXPORT___.push([module.id, `.wrapper__sidebar {
   display: block;
-  background-color: #ffffff;
 }
 @media (max-width: 1439px) {
   .wrapper__sidebar {
     display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
   }
+}
+
+.wrapper__sidebar-wrapper {
+  background: #ffffff;
+  width: 320px;
+  height: 100%;
+  margin-right: auto;
+  position: relative;
+  box-shadow: 0 4px 8px #7e7e82;
 }
 
 @media (max-width: 1439px) {
@@ -1175,6 +1195,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (min-width: 1440px) {
     z-index: 1000;
   }
   .btn {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper__main {
+    display: flex;
+  }
+  .image__close {
     display: none;
   }
 }
@@ -1311,7 +1339,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (min-width: 1440px) {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-}`, "",{"version":3,"sources":["webpack://./src/sidebar.scss"],"names":[],"mappings":"AAOA;EACE;IACE,aAAA;EANF;EAQA;IACE,aAAA;EANF;AACF;AASA;EACE,cAAA;EACA,yBAlBc;AAWhB;AAQE;EAHF;IAII,aAAA;EALF;AACF;;AAOA;EACE;IACE,cAAA;IACA,kBAAA;IACA,YAAA;IACA,aAAA;EAJF;EAMA;IACE,aAAA;EAJF;AACF;AAQE;EACE,aAAA;EACA,YAAA;EACA,SAAA;EACA,UAAA;EACA,yBAzCY;EA0CZ,YAAA;EAEA,4CAAA;AAPJ;AASE;EACE,aAAA;EACA,gBAAA;EACA,SAAA;EACA,UAAA;AAPJ;;AAaA;EACE,iBAAA;EACA,gBAAA;AAVF;;AAeA;EACE,iBAAA;EACA,gBAAA;AAZF;;AAcA;EACE,iBAAA;EACA,gBAAA;AAXF;;AAaA,mCAAA;AAIA;EACE,SAAA;EACA,UAAA;AAbF;AAcE;EACE,gBAAA;AAZJ;AAaI;EACE,yBA5EO;EA6EP,cAAA;AAXN;AAcE;EACE,UAAA;EACA,YAAA;EACA,aAAA;AAZJ;AAcE;EACE,cAAA;EACA,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cA3FU;EA4FV,gBAAA;EACA,iBAAA;AAZJ;AAaI;EACE,iBAAA;EACA,cArGO;EAsGP,eAAA;AAXN;;AAgBA;EACE,aAAA;EACA,gBAAA;AAbF;;AAeA,+BAAA;AAGA;EACE,YAAA;EACA,aAAA;EACA,iBAAA;EACA,iBAAA;AAdF;AAeE;EACE,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,qBAAA;EACA,cAAA;EACA,gBAAA;AAbJ;AAeE;EACE,qBAAA;EACA,cAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,gBAAA;AAbJ;;AAgBA;EACE,gBAAA;EACA,aAAA;EACA,SAAA;EACA,UAAA;AAbF;AAcE;EACE,iBAAA;AAZJ;AAcE;EACE,iBAAA;AAZJ;;AAgBA,8CAAA;AAGA;EACE,aAAA;EACA,iBAAA;EACA,gBAAA;AAfF;AAgBE;EACE,cAjKS;AAmJb;AAgBE;EACE,cA/JU;AAiJd;AAgBE;EACE,cAlKU;AAoJd;;AAkBA;EACE,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;AAfF","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$second-color: #f8f8f8;\r\n$third-color: #d9fff5;\r\n$onde-color: #eaeaea;\r\n$pink-color: #ff3e79;\r\n$black-color: #1b1c21;\r\n@media (min-width: 1440px) {\r\n  .wrapper__main {\r\n    display: flex;\r\n  }\r\n  .image__close {\r\n    display: none;\r\n}\r\n}\r\n\r\n.wrapper__sidebar {\r\n  display: block;\r\n  background-color: $primary-color;\r\n  @media (max-width: 1439px) {\r\n    display: none;\r\n  }\r\n}\r\n@media (max-width: 1439px) {\r\n  .open {\r\n    display: block;\r\n    position: absolute;\r\n    height: 100%;\r\n    z-index: 1000;\r\n  }\r\n  .btn {\r\n    display: none;\r\n  }\r\n}\r\n\r\n.sidebar {\r\n  &__menu {\r\n    display: flex;\r\n    height: 88px;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: $primary-color;\r\n    width: 320px;\r\n\r\n    box-shadow: 2px 0 52px rgba(14, 24, 80, 0.2);\r\n  }\r\n  &__image {\r\n    display: flex;\r\n    list-style: none;\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n}\r\n\r\n.image__picture {\r\n}\r\n.image__burger {\r\n  margin-left: 24px;\r\n  margin-top: 23px;\r\n}\r\n\r\n.button {\r\n}\r\n.image__group {\r\n  margin-left: 16px;\r\n  margin-top: 18px;\r\n}\r\n.image__search {\r\n  margin-left: 78px;\r\n  margin-top: 23px;\r\n}\r\n/*-------------MAIN---------------*/\r\n\r\n.article__sidebar {\r\n}\r\n.sidebar-list {\r\n  margin: 0;\r\n  padding: 0;\r\n  &__button {\r\n    list-style: none;\r\n    &:hover {\r\n      background-color: $pink-color;\r\n      transition: 1s;\r\n    }\r\n  }\r\n  &__highlight {\r\n    width: 4px;\r\n    height: 32px;\r\n    display: flex;\r\n  }\r\n  &__link {\r\n    display: block;\r\n    text-decoration: none;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: $black-color;\r\n    margin-top: 32px;\r\n    margin-left: 24px;\r\n    &_grey {\r\n      margin-left: 20px;\r\n      color: $grey-color;\r\n      margin-top: 4px;\r\n    }\r\n  }\r\n}\r\n\r\n.title {\r\n  display: flex;\r\n  margin-top: 28px;\r\n}\r\n/*----------SDECTION----------*/\r\n.contacts-section {\r\n}\r\n.contacts {\r\n  width: 196px;\r\n  height: 124px;\r\n  margin-left: 24px;\r\n  margin-top: 268px;\r\n  &__email {\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: #1b1c21;\r\n    text-decoration: none;\r\n    display: block;\r\n    margin-top: 12px;\r\n  }\r\n  &__number {\r\n    text-decoration: none;\r\n    display: block;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: #1b1c21;\r\n    margin-top: 16px;\r\n  }\r\n}\r\n.contacts-icon {\r\n  list-style: none;\r\n  display: flex;\r\n  margin: 0;\r\n  padding: 0;\r\n  &__chat {\r\n    margin-left: 16px;\r\n  }\r\n  &__profile {\r\n    margin-left: 16px;\r\n  }\r\n}\r\n\r\n/*-----------------------footer--------------*/\r\n.sidebar__footer {\r\n}\r\n.lang {\r\n  display: flex;\r\n  margin-left: 24px;\r\n  margin-top: 40px;\r\n  &__ru {\r\n    color: $grey-color;\r\n  }\r\n  &__en {\r\n    color: $black-color;\r\n  }\r\n  &__ch {\r\n    color: $black-color;\r\n  }\r\n}\r\n\r\n.button {\r\n  text-decoration: none;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/sidebar.scss"],"names":[],"mappings":"AAQA;EACE,cAAA;AAPF;AASE;EAHF;IAII,aAAA;IACA,eAAA;IACA,WAAA;IACA,YAAA;IACA,uBAAA;IACA,mBAAA;IACA,aAAA;EANF;AACF;;AAQA;EACE,mBAtBc;EAuBd,YAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;EACA,6BAAA;AALF;;AAOA;EACE;IACE,cAAA;IACA,kBAAA;IACA,YAAA;IACA,aAAA;EAJF;EAMA;IACE,aAAA;EAJF;AACF;AAMA;EACE;IACE,aAAA;EAJF;EAMA;IACE,aAAA;EAJF;AACF;AAOE;EACE,aAAA;EACA,YAAA;EACA,SAAA;EACA,UAAA;EACA,yBAtDY;EAuDZ,YAAA;EAEA,4CAAA;AANJ;AAQE;EACE,aAAA;EACA,gBAAA;EACA,SAAA;EACA,UAAA;AANJ;;AAYA;EACE,iBAAA;EACA,gBAAA;AATF;;AAcA;EACE,iBAAA;EACA,gBAAA;AAXF;;AAaA;EACE,iBAAA;EACA,gBAAA;AAVF;;AAYA,mCAAA;AAIA;EACE,SAAA;EACA,UAAA;AAZF;AAaE;EACE,gBAAA;AAXJ;AAYI;EACE,yBAzFO;EA0FP,cAAA;AAVN;AAaE;EACE,UAAA;EACA,YAAA;EACA,aAAA;AAXJ;AAaE;EACE,cAAA;EACA,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAxGU;EAyGV,gBAAA;EACA,iBAAA;AAXJ;AAYI;EACE,iBAAA;EACA,cAlHO;EAmHP,eAAA;AAVN;;AAeA;EACE,aAAA;EACA,gBAAA;AAZF;;AAcA,+BAAA;AAGA;EACE,YAAA;EACA,aAAA;EACA,iBAAA;EACA,iBAAA;AAbF;AAcE;EACE,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,qBAAA;EACA,cAAA;EACA,gBAAA;AAZJ;AAcE;EACE,qBAAA;EACA,cAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,gBAAA;AAZJ;;AAeA;EACE,gBAAA;EACA,aAAA;EACA,SAAA;EACA,UAAA;AAZF;AAaE;EACE,iBAAA;AAXJ;AAaE;EACE,iBAAA;AAXJ;;AAeA,8CAAA;AAGA;EACE,aAAA;EACA,iBAAA;EACA,gBAAA;AAdF;AAeE;EACE,cA9KS;AAiKb;AAeE;EACE,cA5KU;AA+Jd;AAeE;EACE,cA/KU;AAkKd;;AAiBA;EACE,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;AAdF","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$second-color: #f8f8f8;\r\n$third-color: #d9fff5;\r\n$onde-color: #eaeaea;\r\n$pink-color: #ff3e79;\r\n$black-color: #1b1c21;\r\n\r\n.wrapper__sidebar {\r\n  display: block;\r\n\r\n  @media (max-width: 1439px) {\r\n    display: none;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    justify-content: center;\r\n    align-items: center;\r\n    z-index: 1000;\r\n  }\r\n}\r\n.wrapper__sidebar-wrapper {\r\n  background: $primary-color;\r\n  width: 320px;\r\n  height: 100%;\r\n  margin-right: auto;\r\n  position: relative;\r\n  box-shadow: 0 4px 8px $grey-color;\r\n}\r\n@media (max-width: 1439px) {\r\n  .open {\r\n    display: block;\r\n    position: absolute;\r\n    height: 100%;\r\n    z-index: 1000;\r\n  }\r\n  .btn {\r\n    display: none;\r\n  }\r\n}\r\n@media (min-width: 1440px) {\r\n  .wrapper__main {\r\n    display: flex;\r\n  }\r\n  .image__close {\r\n    display: none;\r\n  }\r\n}\r\n.sidebar {\r\n  &__menu {\r\n    display: flex;\r\n    height: 88px;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: $primary-color;\r\n    width: 320px;\r\n\r\n    box-shadow: 2px 0 52px rgba(14, 24, 80, 0.2);\r\n  }\r\n  &__image {\r\n    display: flex;\r\n    list-style: none;\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n}\r\n\r\n.image__picture {\r\n}\r\n.image__burger {\r\n  margin-left: 24px;\r\n  margin-top: 23px;\r\n}\r\n\r\n.button {\r\n}\r\n.image__group {\r\n  margin-left: 16px;\r\n  margin-top: 18px;\r\n}\r\n.image__search {\r\n  margin-left: 78px;\r\n  margin-top: 23px;\r\n}\r\n/*-------------MAIN---------------*/\r\n\r\n.article__sidebar {\r\n}\r\n.sidebar-list {\r\n  margin: 0;\r\n  padding: 0;\r\n  &__button {\r\n    list-style: none;\r\n    &:hover {\r\n      background-color: $pink-color;\r\n      transition: 1s;\r\n    }\r\n  }\r\n  &__highlight {\r\n    width: 4px;\r\n    height: 32px;\r\n    display: flex;\r\n  }\r\n  &__link {\r\n    display: block;\r\n    text-decoration: none;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: $black-color;\r\n    margin-top: 32px;\r\n    margin-left: 24px;\r\n    &_grey {\r\n      margin-left: 20px;\r\n      color: $grey-color;\r\n      margin-top: 4px;\r\n    }\r\n  }\r\n}\r\n\r\n.title {\r\n  display: flex;\r\n  margin-top: 28px;\r\n}\r\n/*----------SDECTION----------*/\r\n.contacts-section {\r\n}\r\n.contacts {\r\n  width: 196px;\r\n  height: 124px;\r\n  margin-left: 24px;\r\n  margin-top: 268px;\r\n  &__email {\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: #1b1c21;\r\n    text-decoration: none;\r\n    display: block;\r\n    margin-top: 12px;\r\n  }\r\n  &__number {\r\n    text-decoration: none;\r\n    display: block;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: #1b1c21;\r\n    margin-top: 16px;\r\n  }\r\n}\r\n.contacts-icon {\r\n  list-style: none;\r\n  display: flex;\r\n  margin: 0;\r\n  padding: 0;\r\n  &__chat {\r\n    margin-left: 16px;\r\n  }\r\n  &__profile {\r\n    margin-left: 16px;\r\n  }\r\n}\r\n\r\n/*-----------------------footer--------------*/\r\n.sidebar__footer {\r\n}\r\n.lang {\r\n  display: flex;\r\n  margin-left: 24px;\r\n  margin-top: 40px;\r\n  &__ru {\r\n    color: $grey-color;\r\n  }\r\n  &__en {\r\n    color: $black-color;\r\n  }\r\n  &__ch {\r\n    color: $black-color;\r\n  }\r\n}\r\n\r\n.button {\r\n  text-decoration: none;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1728,6 +1756,32 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.main {
   height: 40px;
   top: 112px;
 }`, "",{"version":3,"sources":["webpack://./src/title.scss"],"names":[],"mappings":"AAEA;EACE,yBAHc;AAEhB;;AAGA;EACE,aAAA;EACA,SAAA;AAAF;AACE;EACE,YAAA;EACA,YAAA;EACA,UAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,gBAAA;EACA,kBAAA;EACA,iBAAA;EACA,gBAAA;AACJ;AAAI;EAZF;IAaI,iBAAA;EAGJ;AACF;;AAAA;EACE,gBAAA;EACA,UAAA;EACA,YAAA;EACA,UAAA;AAGF","sourcesContent":["$primary-color: #f8f8f8;\r\n\r\n.main {\r\n  background-color: $primary-color;\r\n}\r\n.title {\r\n  display: flex;\r\n  margin: 0;\r\n  &__name {\r\n    width: 288px;\r\n    height: 40px;\r\n    top: 112px;\r\n    font-weight: 700;\r\n    font-size: 28px;\r\n    line-height: 40px;\r\n    letter-spacing: -0.6px;\r\n    margin-top: 24px;\r\n    margin-right: 16px;\r\n    margin-left: 12px;\r\n    margin-bottom: 0;\r\n    @media (min-width: 768px) {\r\n      margin-left: 24px;\r\n    }\r\n  }\r\n}\r\n.highlight {\r\n  margin-top: 24px;\r\n  width: 4px;\r\n  height: 40px;\r\n  top: 112px;\r\n}\r\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/wrapperservices.scss":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/wrapperservices.scss ***!
+  \*******************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3111,6 +3165,58 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_title_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_title_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_title_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
+/***/ }),
+
+/***/ "./src/wrapperservices.scss":
+/*!**********************************!*\
+  !*** ./src/wrapperservices.scss ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_wrapperservices_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../node_modules/sass-loader/dist/cjs.js!./wrapperservices.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/wrapperservices.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_wrapperservices_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_wrapperservices_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_wrapperservices_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_wrapperservices_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
 /***/ })
 
 /******/ 	});
@@ -3276,6 +3382,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../footer.scss */ "./src/footer.scss");
 /* harmony import */ var _modalcall_scss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../modalcall.scss */ "./src/modalcall.scss");
 /* harmony import */ var _modalchat_scss__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../modalchat.scss */ "./src/modalchat.scss");
+/* harmony import */ var _wrapperservices_scss__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../wrapperservices.scss */ "./src/wrapperservices.scss");
+
 
 
 
@@ -3421,18 +3529,32 @@ var openBtn = document.querySelector(".icon__call");
 var modalOverlay = document.querySelector(".modal-call");
 var closeBtn = document.querySelector(".modal-call__button");
 var openBtn2 = document.querySelector(".contacts-icon__call");
+var wrapper = document.querySelector(".wrapper__sidebar-wrapper");
 openBtn.addEventListener("click", function () {
   modalOverlay.classList.add("active");
+  background.style.opacity = "10%";
+  wrapper.style.opacity = "10%";
 });
 openBtn2.addEventListener("click", function () {
   modalOverlay.classList.add("active");
+  background.style.opacity = "10%";
+  wrapper.style.opacity = "10%";
+});
+modalOverlay.addEventListener("click", function (event) {
+  if (event.target === modalOverlay) {
+    modalOverlay.classList.remove("active");
+  }
 });
 closeBtn.addEventListener("click", function () {
   modalOverlay.classList.remove("active");
+  background.style.opacity = "1";
+  wrapper.style.opacity = "1";
 });
 modalOverlay.addEventListener("click", function (e) {
   if (e.target === modalOverlay) {
-    modalOverlay.classList.closest("active");
+    modalOverlay.classList.remove("active");
+    background.style.opacity = "1";
+    wrapper.style.opacity = "1";
   }
 });
 var openChat = document.querySelector(".icon__chat");
@@ -3441,21 +3563,42 @@ var closeChat = document.querySelector(".modal-chat__button");
 var openChat2 = document.querySelector(".contacts-icon__chat");
 openChat.addEventListener("click", function () {
   modalOverlayChat.classList.add("active-2");
+  background.style.opacity = "10%";
 });
 openChat2.addEventListener("click", function () {
   modalOverlayChat.classList.add("active-2");
+  background.style.opacity = "10%";
+  wrapper.style.opacity = "10%";
 });
 closeChat.addEventListener("click", function () {
   modalOverlayChat.classList.remove("active-2");
+  background.style.opacity = "1";
+  wrapper.style.opacity = "1";
+});
+modalOverlayChat.addEventListener("click", function (e) {
+  if (e.target === modalOverlayChat) {
+    modalOverlayChat.classList.remove("active-2");
+    background.style.opacity = "1";
+    wrapper.style.opacity = "1";
+  }
 });
 var openSideBar = document.querySelector(".icon__burger");
 var sideBar = document.querySelector(".wrapper__sidebar");
 var closeSideBar = document.querySelector(".image__close");
+var background = document.querySelector(".wrapper__services");
 openSideBar.addEventListener("click", function () {
   sideBar.classList.add("open");
+  background.style.opacity = "10%";
 });
-closeSideBar.addEventListener('click', function () {
-  sideBar.classList.remove('open');
+closeSideBar.addEventListener("click", function () {
+  sideBar.classList.remove("open");
+  background.style.opacity = "1";
+});
+sideBar.addEventListener("click", function (e) {
+  if (e.target === sideBar) {
+    sideBar.classList.remove("open");
+    background.style.opacity = "1";
+  }
 });
 })();
 
