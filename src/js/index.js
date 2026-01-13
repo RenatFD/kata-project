@@ -216,7 +216,6 @@ modalOverlayChat.addEventListener("click", (e) => {
   }
 });
 
-
 const openSideBar = document.querySelector(".icon__burger");
 const sideBar = document.querySelector(".wrapper__sidebar");
 const closeSideBar = document.querySelector(".image__close");
@@ -234,5 +233,18 @@ sideBar.addEventListener("click", (e) => {
   if (e.target === sideBar) {
     sideBar.classList.remove("open");
     background.style.opacity = "1";
+  }
+});
+
+const buttonText = document.querySelector(".read-more__text");
+const addText = document.querySelector(".section__text_second");
+const text = document.querySelector(".section__text");
+
+buttonText.addEventListener("click", () => {
+  addText.classList.toggle('second')
+  if (buttonText.textContent === "Читать далее") {
+    buttonText.innerHTML = "Скрыть";
+  } else {
+    buttonText.innerHTML = "Читать далее";
   }
 });
