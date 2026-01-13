@@ -940,15 +940,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.section {
   letter-spacing: 0.2px;
   color: #1b1c21;
 }
-@media (max-width: 767px) {
-  .section__text_second {
-    display: none;
-  }
-}
-@media (max-width: 1119px) {
-  .section__text_third {
-    display: none;
-  }
+.second {
+  display: none;
 }
 
 .read-more {
@@ -985,12 +978,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.section {
     margin-top: 32px;
     margin-left: 24px;
     width: 312px;
-    height: 160px;
     margin-bottom: 0;
     padding-bottom: 0;
   }
   .read-more {
-    margin-top: 0;
+    margin-top: 16px;
     padding-left: 1px;
   }
   .section {
@@ -1016,7 +1008,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.section {
 @media (min-width: 1120px) {
   .section__text {
     width: 490px;
-    height: 160px;
     margin-top: 16.22px;
     margin-left: 35px;
   }
@@ -1048,7 +1039,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.section {
 @media (min-width: 1740px) {
   .section__text {
     width: 800px;
-    height: 160px;
     margin-top: 16.22px;
     margin-left: 35px;
   }
@@ -1059,7 +1049,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.section {
     height: 307px;
     margin-top: 7px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/section.scss"],"names":[],"mappings":"AAEA;EACE,yBAHc;AAEhB;AAGE;EACE,wBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,cAVU;AASd;AAIM;EADF;IAEI,aAAA;EADN;AACF;AAKM;EADF;IAEI,aAAA;EAFN;AACF;;AAOA;EACE,aAAA;EACA,YAAA;EACA,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,gBAAA;AAJF;AAME;EACE,qBAAA;EACA,cApCU;EAqCV,YAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,gBAAA;AAJJ;;AAQA;EACE,gBAAA;EACA,aAAA;EACA,YAAA;EACA,aAAA;AALF;;AAQA;EACE;IACE,SAAA;EALF;EAQA;IACE,gBAAA;IACA,iBAAA;IACA,YAAA;IACA,aAAA;IACA,gBAAA;IACA,iBAAA;EANF;EASA;IACE,aAAA;IACA,iBAAA;EAPF;EAUA;IACE,aAAA;EARF;EAWA;IACE,UAAA;IACA,SAAA;EATF;EAYA;IACE,aAAA;IACA,aAAA;IACA,gBAAA;IACA,kBAAA;IACA,iBAAA;IACA,UAAA;IACA,kBAAA;EAVF;EAaA;IACE,SAAA;EAXF;AACF;AAcA;EACE;IACE,YAAA;IACA,aAAA;IACA,mBAAA;IACA,iBAAA;EAZF;EAeA;IACE,iBAAA;EAbF;EAgBA;IACE,eAAA;IACA,aAAA;IACA,eAAA;IACA,iBAAA;EAdF;AACF;AAiBA;EACE;IACE,mBAAA;IACA,iBAAA;EAfF;EAkBA;IACE,iBAAA;EAhBF;EAmBA;IACE,aAAA;IACA,aAAA;IACA,eAAA;IACA,kBAAA;EAjBF;AACF;AAoBA;EACE;IACE,YAAA;IACA,aAAA;IACA,mBAAA;IACA,iBAAA;EAlBF;EAqBA;IACE,iBAAA;EAnBF;EAsBA;IACE,aAAA;IACA,eAAA;EApBF;AACF","sourcesContent":["$primary-color: #f8f8f8;\r\n$black-color: #1b1c21;\r\n.section {\r\n  background-color: $primary-color;\r\n\r\n  &__text {\r\n    margin: 24px 16px 0 16px;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    line-height: 18px;\r\n    letter-spacing: 0.2px;\r\n    color: $black-color;\r\n\r\n    &_second {\r\n      @media (max-width: 767px) {\r\n        display: none;\r\n      }\r\n    }\r\n\r\n    &_third {\r\n      @media (max-width: 1119px) {\r\n        display: none;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n.read-more {\r\n  display: flex;\r\n  width: 132px;\r\n  height: 24px;\r\n  margin-left: 16px;\r\n  margin-top: 16px;\r\n  margin-bottom: 0;\r\n\r\n  &__text {\r\n    text-decoration: none;\r\n    color: $black-color;\r\n    width: 100px;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    margin-left: 8px;\r\n  }\r\n}\r\n\r\n.picture {\r\n  margin-top: 16px;\r\n  display: flex;\r\n  width: 320px;\r\n  height: 176px;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  p {\r\n    margin: 0;\r\n  }\r\n\r\n  .section__text {\r\n    margin-top: 32px;\r\n    margin-left: 24px;\r\n    width: 312px;\r\n    height: 160px;\r\n    margin-bottom: 0;\r\n    padding-bottom: 0;\r\n  }\r\n\r\n  .read-more {\r\n    margin-top: 0;\r\n    padding-left: 1px;\r\n  }\r\n\r\n  .section {\r\n    display: flex;\r\n  }\r\n\r\n  .aside {\r\n    padding: 0;\r\n    margin: 0;\r\n  }\r\n\r\n  .picture {\r\n    display: flex;\r\n    height: 208px;\r\n    margin-top: 32px;\r\n    margin-right: 25px;\r\n    margin-left: 30px;\r\n    padding: 0;\r\n    border-radius: 6px;\r\n  }\r\n\r\n  .text2 {\r\n    margin: 0;\r\n  }\r\n}\r\n\r\n@media (min-width: 1120px) {\r\n  .section__text {\r\n    width: 490px;\r\n    height: 160px;\r\n    margin-top: 16.22px;\r\n    margin-left: 35px;\r\n  }\r\n\r\n  .read-more {\r\n    margin-left: 32px;\r\n  }\r\n\r\n  .picture {\r\n    width: 531.35px;\r\n    height: 307px;\r\n    margin-top: 7px;\r\n    margin-left: 18px;\r\n  }\r\n}\r\n\r\n@media (min-width: 1400px) {\r\n  .section__text {\r\n    margin-top: 16.22px;\r\n    margin-left: 35px;\r\n  }\r\n\r\n  .read-more {\r\n    margin-left: 32px;\r\n  }\r\n\r\n  .picture {\r\n    display: flex;\r\n    height: 307px;\r\n    margin-top: 7px;\r\n    margin-left: 140px;\r\n  }\r\n}\r\n\r\n@media (min-width: 1740px) {\r\n  .section__text {\r\n    width: 800px;\r\n    height: 160px;\r\n    margin-top: 16.22px;\r\n    margin-left: 35px;\r\n  }\r\n\r\n  .read-more {\r\n    margin-left: 32px;\r\n  }\r\n\r\n  .picture {\r\n    height: 307px;\r\n    margin-top: 7px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/section.scss"],"names":[],"mappings":"AAEA;EACE,yBAHc;AAEhB;AAEE;EACE,wBAAA;EACA,eAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,cATU;AASd;AAQA;EACE,aAAA;AANF;;AAQA;EACE,aAAA;EACA,YAAA;EACA,YAAA;EACA,iBAAA;EACA,gBAAA;EACA,gBAAA;AALF;AAOE;EACE,qBAAA;EACA,cA9BU;EA+BV,YAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,gBAAA;AALJ;;AASA;EACE,gBAAA;EACA,aAAA;EACA,YAAA;EACA,aAAA;AANF;;AASA;EACE;IACE,SAAA;EANF;EASA;IACE,gBAAA;IACA,iBAAA;IACA,YAAA;IACA,gBAAA;IACA,iBAAA;EAPF;EAUA;IACE,gBAAA;IACA,iBAAA;EARF;EAWA;IACE,aAAA;EATF;EAYA;IACE,UAAA;IACA,SAAA;EAVF;EAaA;IACE,aAAA;IACA,aAAA;IACA,gBAAA;IACA,kBAAA;IACA,iBAAA;IACA,UAAA;IACA,kBAAA;EAXF;EAcA;IACE,SAAA;EAZF;AACF;AAeA;EACE;IACE,YAAA;IACA,mBAAA;IACA,iBAAA;EAbF;EAgBA;IACE,iBAAA;EAdF;EAiBA;IACE,eAAA;IACA,aAAA;IACA,eAAA;IACA,iBAAA;EAfF;AACF;AAkBA;EACE;IACE,mBAAA;IACA,iBAAA;EAhBF;EAmBA;IACE,iBAAA;EAjBF;EAoBA;IACE,aAAA;IACA,aAAA;IACA,eAAA;IACA,kBAAA;EAlBF;AACF;AAqBA;EACE;IACE,YAAA;IACA,mBAAA;IACA,iBAAA;EAnBF;EAsBA;IACE,iBAAA;EApBF;EAuBA;IACE,aAAA;IACA,eAAA;EArBF;AACF","sourcesContent":["$primary-color: #f8f8f8;\r\n$black-color: #1b1c21;\r\n.section {\r\n  background-color: $primary-color;\r\n  &__text {\r\n    margin: 24px 16px 0 16px;\r\n    font-size: 14px;\r\n    font-weight: 400;\r\n    line-height: 18px;\r\n    letter-spacing: 0.2px;\r\n    color: $black-color;\r\n    &_second {\r\n    }\r\n    &_third {\r\n    }\r\n  }\r\n}\r\n\r\n.second{\r\n  display: none;\r\n}\r\n.read-more {\r\n  display: flex;\r\n  width: 132px;\r\n  height: 24px;\r\n  margin-left: 16px;\r\n  margin-top: 16px;\r\n  margin-bottom: 0;\r\n\r\n  &__text {\r\n    text-decoration: none;\r\n    color: $black-color;\r\n    width: 100px;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    margin-left: 8px;\r\n  }\r\n}\r\n\r\n.picture {\r\n  margin-top: 16px;\r\n  display: flex;\r\n  width: 320px;\r\n  height: 176px;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  p {\r\n    margin: 0;\r\n  }\r\n\r\n  .section__text {\r\n    margin-top: 32px;\r\n    margin-left: 24px;\r\n    width: 312px;\r\n    margin-bottom: 0;\r\n    padding-bottom: 0;\r\n  }\r\n\r\n  .read-more {\r\n    margin-top: 16px;\r\n    padding-left: 1px;\r\n  }\r\n\r\n  .section {\r\n    display: flex;\r\n  }\r\n\r\n  .aside {\r\n    padding: 0;\r\n    margin: 0;\r\n  }\r\n\r\n  .picture {\r\n    display: flex;\r\n    height: 208px;\r\n    margin-top: 32px;\r\n    margin-right: 25px;\r\n    margin-left: 30px;\r\n    padding: 0;\r\n    border-radius: 6px;\r\n  }\r\n\r\n  .text2 {\r\n    margin: 0;\r\n  }\r\n}\r\n\r\n@media (min-width: 1120px) {\r\n  .section__text {\r\n    width: 490px;\r\n    margin-top: 16.22px;\r\n    margin-left: 35px;\r\n  }\r\n\r\n  .read-more {\r\n    margin-left: 32px;\r\n  }\r\n\r\n  .picture {\r\n    width: 531.35px;\r\n    height: 307px;\r\n    margin-top: 7px;\r\n    margin-left: 18px;\r\n  }\r\n}\r\n\r\n@media (min-width: 1400px) {\r\n  .section__text {\r\n    margin-top: 16.22px;\r\n    margin-left: 35px;\r\n  }\r\n\r\n  .read-more {\r\n    margin-left: 32px;\r\n  }\r\n\r\n  .picture {\r\n    display: flex;\r\n    height: 307px;\r\n    margin-top: 7px;\r\n    margin-left: 140px;\r\n  }\r\n}\r\n\r\n@media (min-width: 1740px) {\r\n  .section__text {\r\n    width: 800px;\r\n    margin-top: 16.22px;\r\n    margin-left: 35px;\r\n  }\r\n\r\n  .read-more {\r\n    margin-left: 32px;\r\n  }\r\n\r\n  .picture {\r\n    height: 307px;\r\n    margin-top: 7px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1171,7 +1161,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.wrapper__sidebar {
     display: none;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -1181,9 +1171,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.wrapper__sidebar {
 .wrapper__sidebar-wrapper {
   background: #ffffff;
   width: 320px;
-  height: 100%;
+  height: 100vh;
   margin-right: auto;
-  position: relative;
+  position: fixed;
   box-shadow: 0 4px 8px #7e7e82;
 }
 
@@ -1281,7 +1271,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.wrapper__sidebar {
   width: 196px;
   height: 124px;
   margin-left: 24px;
-  margin-top: 268px;
+  margin-top: 228px;
 }
 .contacts__email {
   font-weight: 500;
@@ -1321,7 +1311,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.wrapper__sidebar {
 .lang {
   display: flex;
   margin-left: 24px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .lang__ru {
   color: #7e7e82;
@@ -1332,14 +1322,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.wrapper__sidebar {
 .lang__ch {
   color: #1b1c21;
 }
-
 .button {
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-}`, "",{"version":3,"sources":["webpack://./src/sidebar.scss"],"names":[],"mappings":"AAQA;EACE,cAAA;AAPF;AASE;EAHF;IAII,aAAA;IACA,eAAA;IACA,WAAA;IACA,YAAA;IACA,uBAAA;IACA,mBAAA;IACA,aAAA;EANF;AACF;;AAQA;EACE,mBAtBc;EAuBd,YAAA;EACA,YAAA;EACA,kBAAA;EACA,kBAAA;EACA,6BAAA;AALF;;AAOA;EACE;IACE,cAAA;IACA,kBAAA;IACA,YAAA;IACA,aAAA;EAJF;EAMA;IACE,aAAA;EAJF;AACF;AAMA;EACE;IACE,aAAA;EAJF;EAMA;IACE,aAAA;EAJF;AACF;AAOE;EACE,aAAA;EACA,YAAA;EACA,SAAA;EACA,UAAA;EACA,yBAtDY;EAuDZ,YAAA;EAEA,4CAAA;AANJ;AAQE;EACE,aAAA;EACA,gBAAA;EACA,SAAA;EACA,UAAA;AANJ;;AAYA;EACE,iBAAA;EACA,gBAAA;AATF;;AAcA;EACE,iBAAA;EACA,gBAAA;AAXF;;AAaA;EACE,iBAAA;EACA,gBAAA;AAVF;;AAYA,mCAAA;AAIA;EACE,SAAA;EACA,UAAA;AAZF;AAaE;EACE,gBAAA;AAXJ;AAYI;EACE,yBAzFO;EA0FP,cAAA;AAVN;AAaE;EACE,UAAA;EACA,YAAA;EACA,aAAA;AAXJ;AAaE;EACE,cAAA;EACA,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAxGU;EAyGV,gBAAA;EACA,iBAAA;AAXJ;AAYI;EACE,iBAAA;EACA,cAlHO;EAmHP,eAAA;AAVN;;AAeA;EACE,aAAA;EACA,gBAAA;AAZF;;AAcA,+BAAA;AAGA;EACE,YAAA;EACA,aAAA;EACA,iBAAA;EACA,iBAAA;AAbF;AAcE;EACE,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,qBAAA;EACA,cAAA;EACA,gBAAA;AAZJ;AAcE;EACE,qBAAA;EACA,cAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,gBAAA;AAZJ;;AAeA;EACE,gBAAA;EACA,aAAA;EACA,SAAA;EACA,UAAA;AAZF;AAaE;EACE,iBAAA;AAXJ;AAaE;EACE,iBAAA;AAXJ;;AAeA,8CAAA;AAGA;EACE,aAAA;EACA,iBAAA;EACA,gBAAA;AAdF;AAeE;EACE,cA9KS;AAiKb;AAeE;EACE,cA5KU;AA+Jd;AAeE;EACE,cA/KU;AAkKd;;AAiBA;EACE,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;AAdF","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$second-color: #f8f8f8;\r\n$third-color: #d9fff5;\r\n$onde-color: #eaeaea;\r\n$pink-color: #ff3e79;\r\n$black-color: #1b1c21;\r\n\r\n.wrapper__sidebar {\r\n  display: block;\r\n\r\n  @media (max-width: 1439px) {\r\n    display: none;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    justify-content: center;\r\n    align-items: center;\r\n    z-index: 1000;\r\n  }\r\n}\r\n.wrapper__sidebar-wrapper {\r\n  background: $primary-color;\r\n  width: 320px;\r\n  height: 100%;\r\n  margin-right: auto;\r\n  position: relative;\r\n  box-shadow: 0 4px 8px $grey-color;\r\n}\r\n@media (max-width: 1439px) {\r\n  .open {\r\n    display: block;\r\n    position: absolute;\r\n    height: 100%;\r\n    z-index: 1000;\r\n  }\r\n  .btn {\r\n    display: none;\r\n  }\r\n}\r\n@media (min-width: 1440px) {\r\n  .wrapper__main {\r\n    display: flex;\r\n  }\r\n  .image__close {\r\n    display: none;\r\n  }\r\n}\r\n.sidebar {\r\n  &__menu {\r\n    display: flex;\r\n    height: 88px;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: $primary-color;\r\n    width: 320px;\r\n\r\n    box-shadow: 2px 0 52px rgba(14, 24, 80, 0.2);\r\n  }\r\n  &__image {\r\n    display: flex;\r\n    list-style: none;\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n}\r\n\r\n.image__picture {\r\n}\r\n.image__burger {\r\n  margin-left: 24px;\r\n  margin-top: 23px;\r\n}\r\n\r\n.button {\r\n}\r\n.image__group {\r\n  margin-left: 16px;\r\n  margin-top: 18px;\r\n}\r\n.image__search {\r\n  margin-left: 78px;\r\n  margin-top: 23px;\r\n}\r\n/*-------------MAIN---------------*/\r\n\r\n.article__sidebar {\r\n}\r\n.sidebar-list {\r\n  margin: 0;\r\n  padding: 0;\r\n  &__button {\r\n    list-style: none;\r\n    &:hover {\r\n      background-color: $pink-color;\r\n      transition: 1s;\r\n    }\r\n  }\r\n  &__highlight {\r\n    width: 4px;\r\n    height: 32px;\r\n    display: flex;\r\n  }\r\n  &__link {\r\n    display: block;\r\n    text-decoration: none;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: $black-color;\r\n    margin-top: 32px;\r\n    margin-left: 24px;\r\n    &_grey {\r\n      margin-left: 20px;\r\n      color: $grey-color;\r\n      margin-top: 4px;\r\n    }\r\n  }\r\n}\r\n\r\n.title {\r\n  display: flex;\r\n  margin-top: 28px;\r\n}\r\n/*----------SDECTION----------*/\r\n.contacts-section {\r\n}\r\n.contacts {\r\n  width: 196px;\r\n  height: 124px;\r\n  margin-left: 24px;\r\n  margin-top: 268px;\r\n  &__email {\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: #1b1c21;\r\n    text-decoration: none;\r\n    display: block;\r\n    margin-top: 12px;\r\n  }\r\n  &__number {\r\n    text-decoration: none;\r\n    display: block;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: #1b1c21;\r\n    margin-top: 16px;\r\n  }\r\n}\r\n.contacts-icon {\r\n  list-style: none;\r\n  display: flex;\r\n  margin: 0;\r\n  padding: 0;\r\n  &__chat {\r\n    margin-left: 16px;\r\n  }\r\n  &__profile {\r\n    margin-left: 16px;\r\n  }\r\n}\r\n\r\n/*-----------------------footer--------------*/\r\n.sidebar__footer {\r\n}\r\n.lang {\r\n  display: flex;\r\n  margin-left: 24px;\r\n  margin-top: 40px;\r\n  &__ru {\r\n    color: $grey-color;\r\n  }\r\n  &__en {\r\n    color: $black-color;\r\n  }\r\n  &__ch {\r\n    color: $black-color;\r\n  }\r\n}\r\n\r\n.button {\r\n  text-decoration: none;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/sidebar.scss"],"names":[],"mappings":"AAQA;EACE,cAAA;AAPF;AASE;EAHF;IAII,aAAA;IACA,eAAA;IACA,WAAA;IACA,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,aAAA;EANF;AACF;;AAQA;EACE,mBAtBc;EAuBd,YAAA;EACA,aAAA;EACA,kBAAA;EACA,eAAA;EACA,6BAAA;AALF;;AAOA;EACE;IACE,cAAA;IACA,kBAAA;IACA,YAAA;IACA,aAAA;EAJF;EAMA;IACE,aAAA;EAJF;AACF;AAMA;EACE;IACE,aAAA;EAJF;EAMA;IACE,aAAA;EAJF;AACF;AAOE;EACE,aAAA;EACA,YAAA;EACA,SAAA;EACA,UAAA;EACA,yBAtDY;EAuDZ,YAAA;EACA,4CAAA;AALJ;AAOE;EACE,aAAA;EACA,gBAAA;EACA,SAAA;EACA,UAAA;AALJ;;AAWA;EACE,iBAAA;EACA,gBAAA;AARF;;AAaA;EACE,iBAAA;EACA,gBAAA;AAVF;;AAYA;EACE,iBAAA;EACA,gBAAA;AATF;;AAWA,mCAAA;AAIA;EACE,SAAA;EACA,UAAA;AAXF;AAYE;EACE,gBAAA;AAVJ;AAWI;EACE,yBAxFO;EAyFP,cAAA;AATN;AAYE;EACE,UAAA;EACA,YAAA;EACA,aAAA;AAVJ;AAYE;EACE,cAAA;EACA,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAvGU;EAwGV,gBAAA;EACA,iBAAA;AAVJ;AAWI;EACE,iBAAA;EACA,cAjHO;EAkHP,eAAA;AATN;;AAcA;EACE,aAAA;EACA,gBAAA;AAXF;;AAaA,+BAAA;AAGA;EACE,YAAA;EACA,aAAA;EACA,iBAAA;EACA,iBAAA;AAZF;AAaE;EACE,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,qBAAA;EACA,cAAA;EACA,gBAAA;AAXJ;AAaE;EACE,qBAAA;EACA,cAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cAAA;EACA,gBAAA;AAXJ;;AAkBA;EACE,gBAAA;EACA,aAAA;EACA,SAAA;EACA,UAAA;AAfF;AAgBE;EACE,iBAAA;AAdJ;AAgBE;EACE,iBAAA;AAdJ;;AAkBA,8CAAA;AAGA;EACE,aAAA;EACA,iBAAA;EACA,gBAAA;AAjBF;AAkBE;EACE,cAjLS;AAiKb;AAkBE;EACE,cA/KU;AA+Jd;AAkBE;EACE,cAlLU;AAkKd;AAsBA;EACE,qBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;AApBF","sourcesContent":["$primary-color: #ffffff;\r\n$grey-color: #7e7e82;\r\n$second-color: #f8f8f8;\r\n$third-color: #d9fff5;\r\n$onde-color: #eaeaea;\r\n$pink-color: #ff3e79;\r\n$black-color: #1b1c21;\r\n\r\n.wrapper__sidebar {\r\n  display: block;\r\n\r\n  @media (max-width: 1439px) {\r\n    display: none;\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100vh;\r\n    justify-content: center;\r\n    align-items: center;\r\n    z-index: 1000;\r\n  }\r\n}\r\n.wrapper__sidebar-wrapper {\r\n  background: $primary-color;\r\n  width: 320px;\r\n  height: 100vh;\r\n  margin-right: auto;\r\n  position: fixed;\r\n  box-shadow: 0 4px 8px $grey-color;\r\n}\r\n@media (max-width: 1439px) {\r\n  .open {\r\n    display: block;\r\n    position: absolute;\r\n    height: 100%;\r\n    z-index: 1000;\r\n  }\r\n  .btn {\r\n    display: none;\r\n  }\r\n}\r\n@media (min-width: 1440px) {\r\n  .wrapper__main {\r\n    display: flex;\r\n  }\r\n  .image__close {\r\n    display: none;\r\n  }\r\n}\r\n.sidebar {\r\n  &__menu {\r\n    display: flex;\r\n    height: 88px;\r\n    margin: 0;\r\n    padding: 0;\r\n    background-color: $primary-color;\r\n    width: 320px;\r\n    box-shadow: 2px 0 52px rgba(14, 24, 80, 0.2);\r\n  }\r\n  &__image {\r\n    display: flex;\r\n    list-style: none;\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n}\r\n\r\n.image__picture {\r\n}\r\n.image__burger {\r\n  margin-left: 24px;\r\n  margin-top: 23px;\r\n}\r\n\r\n.button {\r\n}\r\n.image__group {\r\n  margin-left: 16px;\r\n  margin-top: 18px;\r\n}\r\n.image__search {\r\n  margin-left: 78px;\r\n  margin-top: 23px;\r\n}\r\n/*-------------MAIN---------------*/\r\n\r\n.article__sidebar {\r\n}\r\n.sidebar-list {\r\n  margin: 0;\r\n  padding: 0;\r\n  &__button {\r\n    list-style: none;\r\n    &:hover {\r\n      background-color: $pink-color;\r\n      transition: 1s;\r\n    }\r\n  }\r\n  &__highlight {\r\n    width: 4px;\r\n    height: 32px;\r\n    display: flex;\r\n  }\r\n  &__link {\r\n    display: block;\r\n    text-decoration: none;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: $black-color;\r\n    margin-top: 32px;\r\n    margin-left: 24px;\r\n    &_grey {\r\n      margin-left: 20px;\r\n      color: $grey-color;\r\n      margin-top: 4px;\r\n    }\r\n  }\r\n}\r\n\r\n.title {\r\n  display: flex;\r\n  margin-top: 28px;\r\n}\r\n/*----------SDECTION----------*/\r\n.contacts-section {\r\n}\r\n.contacts {\r\n  width: 196px;\r\n  height: 124px;\r\n  margin-left: 24px;\r\n  margin-top: 228px;\r\n  &__email {\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: #1b1c21;\r\n    text-decoration: none;\r\n    display: block;\r\n    margin-top: 12px;\r\n  }\r\n  &__number {\r\n    text-decoration: none;\r\n    display: block;\r\n    font-weight: 700;\r\n    font-size: 24px;\r\n    line-height: 32px;\r\n    letter-spacing: -0.6px;\r\n    color: #1b1c21;\r\n    margin-top: 16px;\r\n  }\r\n}\r\n@media(max-width:1440px){\r\n  .contacts{\r\n  }\r\n}\r\n.contacts-icon {\r\n  list-style: none;\r\n  display: flex;\r\n  margin: 0;\r\n  padding: 0;\r\n  &__chat {\r\n    margin-left: 16px;\r\n  }\r\n  &__profile {\r\n    margin-left: 16px;\r\n  }\r\n}\r\n\r\n/*-----------------------footer--------------*/\r\n.sidebar__footer {\r\n}\r\n.lang {\r\n  display: flex;\r\n  margin-left: 24px;\r\n  margin-top: 20px;\r\n  &__ru {\r\n    color: $grey-color;\r\n  }\r\n  &__en {\r\n    color: $black-color;\r\n  }\r\n  &__ch {\r\n    color: $black-color;\r\n  }\r\n  @media(max-width: 1440px){\r\n  }\r\n}\r\n\r\n.button {\r\n  text-decoration: none;\r\n  font-weight: 500;\r\n  font-size: 16px;\r\n  line-height: 24px;\r\n  letter-spacing: -0.2px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1379,7 +1368,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.side-menu {
   margin-top: 24px;
   white-space: nowrap;
   height: 40px;
-  width: 100%;
 }
 @media (min-width: 768px) {
   .side-menu__list {
@@ -1411,7 +1399,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.side-menu {
   background-color: #ffffff;
   width: 246px;
   justify-content: center;
-}`, "",{"version":3,"sources":["webpack://./src/sidemenu.scss"],"names":[],"mappings":"AAGA;EACE,SAAA;EACA,UAAA;AAFF;AAGE;EACE,aAAA;EACA,gBAAA;EACA,cAAA;EACA,iBAAA;EACA,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,YAAA;EACA,WAAA;AADJ;AAEI;EAXF;IAYI,gBAAA;IACA,iBAAA;EACJ;AACF;AACE;EACE,kBAAA;EACA,aAAA;AACJ;AAAI;EACE,kBAAA;AAEN;AACE;EACE,mBAAA;EACA,aAAA;EACA,kBAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cArCS;AAsCb;AAAI;EACE,yBAAA;EACA,yBA1CU;EA2CV,YAAA;EACA,uBAAA;AAEN","sourcesContent":["$primary-color: #ffffff;\r\n$second-color: #b8ffec;\r\n$grey-color: #7e7e82;\r\n.side-menu {\r\n  margin: 0;\r\n  padding: 0;\r\n  &__list {\r\n    display: flex;\r\n    list-style: none;\r\n    overflow: auto;\r\n    flex-wrap: nowrap;\r\n    padding-left: 0;\r\n    margin-left: 16px;\r\n    margin-top: 24px;\r\n    white-space: nowrap;\r\n    height: 40px;\r\n    width: 100%;\r\n    @media (min-width: 768px) {\r\n      margin-top: 32px;\r\n      margin-left: 24px;\r\n    }\r\n  }\r\n  &__button {\r\n    margin-right: 15px;\r\n    display: flex;\r\n    &:last-child {\r\n      margin-right: 24px;\r\n    }\r\n  }\r\n  &__link {\r\n    align-items: center;\r\n    display: flex;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    border-radius: 6px;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: $grey-color;\r\n    &_blue {\r\n      border: 2px solid $second-color;\r\n      background-color: $primary-color;\r\n      width: 246px;\r\n      justify-content: center;\r\n    }\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/sidemenu.scss"],"names":[],"mappings":"AAGA;EACE,SAAA;EACA,UAAA;AAFF;AAGE;EACE,aAAA;EACA,gBAAA;EACA,cAAA;EACA,iBAAA;EACA,eAAA;EACA,iBAAA;EACA,gBAAA;EACA,mBAAA;EACA,YAAA;AADJ;AAEI;EAVF;IAWI,gBAAA;IACA,iBAAA;EACJ;AACF;AACE;EACE,kBAAA;EACA,aAAA;AACJ;AAAI;EACE,kBAAA;AAEN;AACE;EACE,mBAAA;EACA,aAAA;EACA,kBAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,sBAAA;EACA,cApCS;AAqCb;AAAI;EACE,yBAAA;EACA,yBAzCU;EA0CV,YAAA;EACA,uBAAA;AAEN","sourcesContent":["$primary-color: #ffffff;\r\n$second-color: #b8ffec;\r\n$grey-color: #7e7e82;\r\n.side-menu {\r\n  margin: 0;\r\n  padding: 0;\r\n  &__list {\r\n    display: flex;\r\n    list-style: none;\r\n    overflow: auto;\r\n    flex-wrap: nowrap;\r\n    padding-left: 0;\r\n    margin-left: 16px;\r\n    margin-top: 24px;\r\n    white-space: nowrap;\r\n    height: 40px;\r\n    @media (min-width: 768px) {\r\n      margin-top: 32px;\r\n      margin-left: 24px;\r\n    }\r\n  }\r\n  &__button {\r\n    margin-right: 15px;\r\n    display: flex;\r\n    &:last-child {\r\n      margin-right: 24px;\r\n    }\r\n  }\r\n  &__link {\r\n    align-items: center;\r\n    display: flex;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    border-radius: 6px;\r\n    font-weight: 500;\r\n    font-size: 16px;\r\n    line-height: 24px;\r\n    letter-spacing: -0.2px;\r\n    color: $grey-color;\r\n    &_blue {\r\n      border: 2px solid $second-color;\r\n      background-color: $primary-color;\r\n      width: 246px;\r\n      justify-content: center;\r\n    }\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1781,7 +1769,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `@media (min-width: 1440px) {
+  .wrapper__services {
+    margin-left: 320px;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/wrapperservices.scss"],"names":[],"mappings":"AAAA;EACA;IACG,kBAAA;EACD;AACF","sourcesContent":["@media (min-width:1440px){\r\n.wrapper__services {\r\n   margin-left: 320px;\r\n}\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3598,6 +3590,17 @@ sideBar.addEventListener("click", function (e) {
   if (e.target === sideBar) {
     sideBar.classList.remove("open");
     background.style.opacity = "1";
+  }
+});
+var buttonText = document.querySelector(".read-more__text");
+var addText = document.querySelector(".section__text_second");
+var text = document.querySelector(".section__text");
+buttonText.addEventListener("click", function () {
+  addText.classList.toggle('second');
+  if (buttonText.textContent === "Читать далее") {
+    buttonText.innerHTML = "Скрыть";
+  } else {
+    buttonText.innerHTML = "Читать далее";
   }
 });
 })();
