@@ -3592,6 +3592,7 @@ sideBar.addEventListener("click", function (e) {
   if (e.target === sideBar) {
     sideBar.classList.remove("open");
     background.style.opacity = "1";
+    background.style.position = 'static';
   }
 });
 var buttonText = document.querySelector(".read-more__text");

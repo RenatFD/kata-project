@@ -235,6 +235,7 @@ sideBar.addEventListener("click", (e) => {
   if (e.target === sideBar) {
     sideBar.classList.remove("open");
     background.style.opacity = "1";
+    background.style.position = 'static';
   }
 });
 
