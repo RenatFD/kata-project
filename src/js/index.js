@@ -224,10 +224,12 @@ const background = document.querySelector(".wrapper__services");
 openSideBar.addEventListener("click", () => {
   sideBar.classList.add("open");
   background.style.opacity = "10%";
+  background.style.position = 'fixed';
 });
 closeSideBar.addEventListener("click", () => {
   sideBar.classList.remove("open");
   background.style.opacity = "1";
+  background.style.position = 'static';
 });
 sideBar.addEventListener("click", (e) => {
   if (e.target === sideBar) {
@@ -248,3 +250,4 @@ buttonText.addEventListener("click", () => {
     buttonText.innerHTML = "Читать далее";
   }
 });
+

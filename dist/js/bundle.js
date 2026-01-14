@@ -3581,10 +3581,12 @@ var background = document.querySelector(".wrapper__services");
 openSideBar.addEventListener("click", function () {
   sideBar.classList.add("open");
   background.style.opacity = "10%";
+  background.style.position = 'fixed';
 });
 closeSideBar.addEventListener("click", function () {
   sideBar.classList.remove("open");
   background.style.opacity = "1";
+  background.style.position = 'static';
 });
 sideBar.addEventListener("click", function (e) {
   if (e.target === sideBar) {
